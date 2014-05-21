@@ -22,6 +22,7 @@
 		7A2D0C9E192D0BF400B2BD14 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2D0C82192D0BF400B2BD14 /* CoreData.framework */; };
 		7A2D0CA6192D0BF400B2BD14 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7A2D0CA4192D0BF400B2BD14 /* InfoPlist.strings */; };
 		7A2D0CA8192D0BF400B2BD14 /* NSS_IITDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2D0CA7192D0BF400B2BD14 /* NSS_IITDTests.m */; };
+		7A2D0CB2192D1AF500B2BD14 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A2D0CB1192D1AF500B2BD14 /* Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		7A2D0CA3192D0BF400B2BD14 /* NSS IITDTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSS IITDTests-Info.plist"; sourceTree = "<group>"; };
 		7A2D0CA5192D0BF400B2BD14 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7A2D0CA7192D0BF400B2BD14 /* NSS_IITDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSS_IITDTests.m; sourceTree = "<group>"; };
+		7A2D0CB1192D1AF500B2BD14 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		7A2D0C70192D0BF400B2BD14 = {
 			isa = PBXGroup;
 			children = (
+				7A2D0CB1192D1AF500B2BD14 /* Storyboard.storyboard */,
 				7A2D0C84192D0BF400B2BD14 /* NSS IITD */,
 				7A2D0CA1192D0BF400B2BD14 /* NSS IITDTests */,
 				7A2D0C7B192D0BF400B2BD14 /* Frameworks */,
@@ -230,6 +233,7 @@
 			files = (
 				7A2D0C89192D0BF400B2BD14 /* InfoPlist.strings in Resources */,
 				7A2D0C94192D0BF400B2BD14 /* Images.xcassets in Resources */,
+				7A2D0CB2192D1AF500B2BD14 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +374,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSS IITD/NSS IITD-Prefix.pch";
 				INFOPLIST_FILE = "NSS IITD/NSS IITD-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -383,6 +388,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSS IITD/NSS IITD-Prefix.pch";
 				INFOPLIST_FILE = "NSS IITD/NSS IITD-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
