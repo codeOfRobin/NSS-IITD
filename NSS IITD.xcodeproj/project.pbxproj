@@ -23,6 +23,7 @@
 		7A2D0CA6192D0BF400B2BD14 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7A2D0CA4192D0BF400B2BD14 /* InfoPlist.strings */; };
 		7A2D0CA8192D0BF400B2BD14 /* NSS_IITDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2D0CA7192D0BF400B2BD14 /* NSS_IITDTests.m */; };
 		7A2D0CB2192D1AF500B2BD14 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A2D0CB1192D1AF500B2BD14 /* Storyboard.storyboard */; };
+		7A2D0CB5192D447100B2BD14 /* hoursViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2D0CB4192D447100B2BD14 /* hoursViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +55,9 @@
 		7A2D0CA3192D0BF400B2BD14 /* NSS IITDTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSS IITDTests-Info.plist"; sourceTree = "<group>"; };
 		7A2D0CA5192D0BF400B2BD14 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7A2D0CA7192D0BF400B2BD14 /* NSS_IITDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSS_IITDTests.m; sourceTree = "<group>"; };
-		7A2D0CB1192D1AF500B2BD14 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		7A2D0CB1192D1AF500B2BD14 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = ../Storyboard.storyboard; sourceTree = "<group>"; };
+		7A2D0CB3192D447100B2BD14 /* hoursViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hoursViewController.h; sourceTree = "<group>"; };
+		7A2D0CB4192D447100B2BD14 /* hoursViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = hoursViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +89,6 @@
 		7A2D0C70192D0BF400B2BD14 = {
 			isa = PBXGroup;
 			children = (
-				7A2D0CB1192D1AF500B2BD14 /* Storyboard.storyboard */,
 				7A2D0C84192D0BF400B2BD14 /* NSS IITD */,
 				7A2D0CA1192D0BF400B2BD14 /* NSS IITDTests */,
 				7A2D0C7B192D0BF400B2BD14 /* Frameworks */,
@@ -118,6 +120,9 @@
 		7A2D0C84192D0BF400B2BD14 /* NSS IITD */ = {
 			isa = PBXGroup;
 			children = (
+				7A2D0CB1192D1AF500B2BD14 /* Storyboard.storyboard */,
+				7A2D0CB3192D447100B2BD14 /* hoursViewController.h */,
+				7A2D0CB4192D447100B2BD14 /* hoursViewController.m */,
 				7A2D0C8D192D0BF400B2BD14 /* AppDelegate.h */,
 				7A2D0C8E192D0BF400B2BD14 /* AppDelegate.m */,
 				7A2D0C93192D0BF400B2BD14 /* Images.xcassets */,
@@ -252,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A2D0CB5192D447100B2BD14 /* hoursViewController.m in Sources */,
 				7A2D0C8F192D0BF400B2BD14 /* AppDelegate.m in Sources */,
 				7A2D0C92192D0BF400B2BD14 /* NSS_IITD.xcdatamodeld in Sources */,
 				7A2D0C8B192D0BF400B2BD14 /* main.m in Sources */,
@@ -453,6 +459,7 @@
 				7A2D0CAD192D0BF400B2BD14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7A2D0CAE192D0BF400B2BD14 /* Build configuration list for PBXNativeTarget "NSS IITDTests" */ = {
 			isa = XCConfigurationList;
@@ -461,6 +468,7 @@
 				7A2D0CB0192D0BF400B2BD14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
