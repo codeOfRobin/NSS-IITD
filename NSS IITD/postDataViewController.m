@@ -1,19 +1,18 @@
 //
-//  hoursViewController.m
+//  postDataViewController.m
 //  NSS IITD
 //
-//  Created by Robin Malhotra on 22/05/14.
+//  Created by Robin Malhotra on 23/05/14.
 //  Copyright (c) 2014 Robin's code kitchen. All rights reserved.
 //
 
-#import "hoursViewController.h"
+#import "postDataViewController.h"
 
-@interface hoursViewController ()
-@property (strong, nonatomic) IBOutlet UILabel *hoursLabel;
-@property (strong,nonatomic) NSArray *dataArray;
+@interface postDataViewController ()
+
 @end
 
-@implementation hoursViewController
+@implementation postDataViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -23,9 +22,11 @@
     }
     return self;
 }
-- (IBAction)checkHours:(id)sender
+
+- (void)viewDidLoad
 {
-    NSString *URL=@"http://www.nssiitd.in/nsshours/teststudent.php?entry_no=2012TT10951";
+    [super viewDidLoad];
+    NSString *URL=@"http://www.nssiitd.in/Android/exampl.php";
     NSURLSession *session = [NSURLSession sharedSession];
     [[session dataTaskWithURL:[NSURL URLWithString:URL]
             completionHandler:^(NSData *data,
@@ -33,30 +34,12 @@
                                 NSError *error){
                 NSString *dataString=[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
                 NSLog(@"%@",dataString);
-                self.dataArray=[dataString componentsSeparatedByString:@";"];
+
                 
-                for (NSString *string in self.dataArray) {
-                    
-                    NSLog(@"%@",string);
-                    
-                }
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Hours" message:[self.dataArray objectAtIndex:4] delegate:self cancelButtonTitle:@"okay" otherButtonTitles: nil];
-                    [alert show];
-                    [self.hoursLabel setText:[self.dataArray objectAtIndex:4]];
-                });
             }] resume];
-    
-
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    
 
     
-    
+
     // Do any additional setup after loading the view.
 }
 

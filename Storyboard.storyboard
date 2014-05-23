@@ -23,6 +23,16 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCF-fY-zHf">
+                                <rect key="frame" x="109" y="232" width="90" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Check Hours">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkHours:" destination="zuX-eM-guN" eventType="touchUpInside" id="2ng-ti-aRc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -46,6 +56,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="Cjb-z3-gP2" kind="relationship" relationship="viewControllers" id="Zcl-sL-aPg"/>
                         <segue destination="zuX-eM-guN" kind="relationship" relationship="viewControllers" id="JjK-oj-WLo"/>
                         <segue destination="jf7-hQ-67Z" kind="relationship" relationship="viewControllers" id="Gpk-Cy-dWi"/>
                     </connections>
@@ -54,10 +65,29 @@
             </objects>
             <point key="canvasLocation" x="-30" y="1101"/>
         </scene>
-        <!--View Controller - Item 2-->
+        <!--View Controller - Home-->
+        <scene sceneID="X06-iB-TG6">
+            <objects>
+                <viewController id="Cjb-z3-gP2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OUQ-T2-x26"/>
+                        <viewControllerLayoutGuide type="bottom" id="v2b-4r-fZc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I6v-2i-QKc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" id="r86-7c-uuJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wVq-8s-TxC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26" y="2029"/>
+        </scene>
+        <!--Post Data View Controller - Item 2-->
         <scene sceneID="yto-H8-7Up">
             <objects>
-                <viewController id="jf7-hQ-67Z" sceneMemberID="viewController">
+                <viewController id="jf7-hQ-67Z" customClass="postDataViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3OV-sN-6hO"/>
                         <viewControllerLayoutGuide type="bottom" id="JYz-5X-0zA"/>

@@ -24,6 +24,7 @@
 		7A2D0CA8192D0BF400B2BD14 /* NSS_IITDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2D0CA7192D0BF400B2BD14 /* NSS_IITDTests.m */; };
 		7A2D0CB2192D1AF500B2BD14 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A2D0CB1192D1AF500B2BD14 /* Storyboard.storyboard */; };
 		7A2D0CB5192D447100B2BD14 /* hoursViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2D0CB4192D447100B2BD14 /* hoursViewController.m */; };
+		7AF24247192F9F150043E2C2 /* postDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF24246192F9F150043E2C2 /* postDataViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		7A2D0CB1192D1AF500B2BD14 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = ../Storyboard.storyboard; sourceTree = "<group>"; };
 		7A2D0CB3192D447100B2BD14 /* hoursViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hoursViewController.h; sourceTree = "<group>"; };
 		7A2D0CB4192D447100B2BD14 /* hoursViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = hoursViewController.m; sourceTree = "<group>"; };
+		7AF24245192F9F150043E2C2 /* postDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = postDataViewController.h; sourceTree = "<group>"; };
+		7AF24246192F9F150043E2C2 /* postDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = postDataViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				7A2D0CB1192D1AF500B2BD14 /* Storyboard.storyboard */,
+				7AF24245192F9F150043E2C2 /* postDataViewController.h */,
+				7AF24246192F9F150043E2C2 /* postDataViewController.m */,
 				7A2D0CB3192D447100B2BD14 /* hoursViewController.h */,
 				7A2D0CB4192D447100B2BD14 /* hoursViewController.m */,
 				7A2D0C8D192D0BF400B2BD14 /* AppDelegate.h */,
@@ -258,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A2D0CB5192D447100B2BD14 /* hoursViewController.m in Sources */,
+				7AF24247192F9F150043E2C2 /* postDataViewController.m in Sources */,
 				7A2D0C8F192D0BF400B2BD14 /* AppDelegate.m in Sources */,
 				7A2D0C92192D0BF400B2BD14 /* NSS_IITD.xcdatamodeld in Sources */,
 				7A2D0C8B192D0BF400B2BD14 /* main.m in Sources */,
