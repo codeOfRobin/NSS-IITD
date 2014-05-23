@@ -60,12 +60,31 @@
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    [defaults setObject:name forKey:@"name"];
-    [defaults setObject:entryNo forKey:@"entryNo"];
-    [defaults setObject:emailID forKey:@"emailID"];
-    [defaults setObject:password forKey:@"password"];
-    [defaults setObject:phoneNo forKey:@"phoneNo"];
+    if ([self isValidEmail:emailID])
+    {
+        [defaults setObject:name forKey:@"name"];
+        [defaults setObject:entryNo forKey:@"entryNo"];
+        [defaults setObject:emailID forKey:@"emailID"];
+        [defaults setObject:password forKey:@"password"];
+        [defaults setObject:phoneNo forKey:@"phoneNo"];
+    }
     
+    else
+    {
+        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Error" message:@"invalid Email" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles: nil];
+        [alert show];
+    }
+    
+    
+    
+}
+
+
+-(BOOL)isValidEmail:(NSString *)email//http://www.codigator.com/snippets/validating-an-email-in-ios-snippet/
+{
+    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    NSPredicate *emailPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailPredicate evaluateWithObject:email];
 }
 
 - (void)didReceiveMemoryWarning
