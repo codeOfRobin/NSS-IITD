@@ -33,7 +33,7 @@
                                 NSURLResponse *response,
                                 NSError *error){
                 NSString *dataString=[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                NSLog(@"%@",dataString);
+//                NSLog(@"%@",dataString);
 
                 
             }] resume];

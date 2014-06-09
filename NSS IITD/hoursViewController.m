@@ -25,7 +25,10 @@
 }
 - (IBAction)checkHours:(id)sender
 {
-    NSString *URL=@"http://www.nssiitd.in/nsshours/teststudent.php?entry_no=2012TT10951";
+    NSString *preURL=@"http://www.nssiitd.in/nsshours/teststudent.php?entry_no=";
+    NSString *entryno=[[NSUserDefaults standardUserDefaults] stringForKey:@"entryNo"];
+    NSString *URL=[NSString stringWithFormat:@"%@%@",preURL,entryno];
+    NSLog(@"%@",entryno);
     NSURLSession *session = [NSURLSession sharedSession];
     [[session dataTaskWithURL:[NSURL URLWithString:URL]
             completionHandler:^(NSData *data,
