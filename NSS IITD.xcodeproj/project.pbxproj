@@ -25,6 +25,7 @@
 		7A2D0CB2192D1AF500B2BD14 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A2D0CB1192D1AF500B2BD14 /* Storyboard.storyboard */; };
 		7A2D0CB5192D447100B2BD14 /* hoursViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2D0CB4192D447100B2BD14 /* hoursViewController.m */; };
 		7A47258D19466EC1004282BC /* eventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A47258C19466EC1004282BC /* eventViewController.m */; };
+		7A4725901947B30A004282BC /* eventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A47258F1947B30A004282BC /* eventDetailViewController.m */; };
 		7AF24247192F9F150043E2C2 /* postDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF24246192F9F150043E2C2 /* postDataViewController.m */; };
 		7AF2424A192FCB800043E2C2 /* UserDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF24249192FCB800043E2C2 /* UserDetailsViewController.m */; };
 /* End PBXBuildFile section */
@@ -63,6 +64,8 @@
 		7A2D0CB4192D447100B2BD14 /* hoursViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = hoursViewController.m; sourceTree = "<group>"; };
 		7A47258B19466EC1004282BC /* eventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventViewController.h; sourceTree = "<group>"; };
 		7A47258C19466EC1004282BC /* eventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventViewController.m; sourceTree = "<group>"; };
+		7A47258E1947B30A004282BC /* eventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventDetailViewController.h; sourceTree = "<group>"; };
+		7A47258F1947B30A004282BC /* eventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventDetailViewController.m; sourceTree = "<group>"; };
 		7AF24245192F9F150043E2C2 /* postDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = postDataViewController.h; sourceTree = "<group>"; };
 		7AF24246192F9F150043E2C2 /* postDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = postDataViewController.m; sourceTree = "<group>"; };
 		7AF24248192FCB800043E2C2 /* UserDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailsViewController.h; sourceTree = "<group>"; };
@@ -130,6 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				7A2D0CB1192D1AF500B2BD14 /* Storyboard.storyboard */,
+				7A47258E1947B30A004282BC /* eventDetailViewController.h */,
+				7A47258F1947B30A004282BC /* eventDetailViewController.m */,
 				7A47258B19466EC1004282BC /* eventViewController.h */,
 				7A47258C19466EC1004282BC /* eventViewController.m */,
 				7AF24248192FCB800043E2C2 /* UserDetailsViewController.h */,
@@ -274,6 +279,7 @@
 			files = (
 				7A2D0CB5192D447100B2BD14 /* hoursViewController.m in Sources */,
 				7AF24247192F9F150043E2C2 /* postDataViewController.m in Sources */,
+				7A4725901947B30A004282BC /* eventDetailViewController.m in Sources */,
 				7A2D0C8F192D0BF400B2BD14 /* AppDelegate.m in Sources */,
 				7A2D0C92192D0BF400B2BD14 /* NSS_IITD.xcdatamodeld in Sources */,
 				7A47258D19466EC1004282BC /* eventViewController.m in Sources */,

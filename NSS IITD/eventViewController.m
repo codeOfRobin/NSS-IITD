@@ -27,10 +27,41 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.events=[[NSMutableArray alloc]init];
     [self.segmentedControl addTarget:self
                          action:@selector(pickOne:)
                forControlEvents:UIControlEventValueChanged];
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    [self.tableView reloadData];
+    
+    
+    NSString *URL=@"http://localhost/nss/upcoming_events.php";
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    [[session dataTaskWithURL:[NSURL URLWithString:URL]
+            completionHandler:^(NSData *data,
+                                NSURLResponse *response,
+                                NSError *error){
+                NSString *dataString=[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                NSLog(@"%@",dataString);
+
+                NSArray *dataArray=[dataString componentsSeparatedByString:@"break"];
+                [self.events removeAllObjects];
+                
+                for (NSString *string in dataArray)
+                {
+                    [self.events addObject:string];
+                    
+                }
+                [self.events removeLastObject];
+                
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.tableView reloadData];
+                });
+            }] resume];
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -56,21 +87,53 @@
                                     NSURLResponse *response,
                                     NSError *error){
                     NSString *dataString=[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                    NSLog(@"%@",dataString);
-                    NSArray *dataArray=[dataString componentsSeparatedByString:@";"];
                     
-                    for (NSString *string in dataArray) {
-                        
-                        NSLog(@"%@",string);
+                    NSArray *dataArray=[dataString componentsSeparatedByString:@"break"];
+                    [self.events removeAllObjects];
+
+                    for (NSString *string in dataArray)
+                    {
+                        [self.events addObject:string];
                         
                     }
+                    [self.events removeLastObject];
+                    
+                    
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        
+                        [self.tableView reloadData];
                     });
                 }] resume];
-        
-        
     }
+    
+    else if (segmentedControl.selectedSegmentIndex==1)
+    {
+        NSString *URL=@"http://localhost/nss/current_events.php";
+        
+        NSURLSession *session = [NSURLSession sharedSession];
+        [[session dataTaskWithURL:[NSURL URLWithString:URL]
+                completionHandler:^(NSData *data,
+                                    NSURLResponse *response,
+                                    NSError *error){
+                    NSString *dataString=[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                    NSLog(@"%@",dataString);
+                    NSArray *dataArray=[dataString componentsSeparatedByString:@"break"];
+                    [self.events removeAllObjects];
+                    
+                    for (NSString *string in dataArray)
+                    {
+                        [self.events addObject:string];
+                        
+                    }
+                    [self.events removeLastObject];
+                    
+                    
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self.tableView reloadData];
+                    });
+                }] resume];
+    }
+    
+    
 }
 
 //-(NSMutableArray *)getArrayFromString
@@ -91,16 +154,24 @@
     return [self.events count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"eventCell" forIndexPath:indexPath];
+    UILabel *nameLabel=(UILabel *)[cell.contentView viewWithTag:1];
+    UILabel *STLabel=(UILabel *)[cell.contentView viewWithTag:2];
+    UILabel *ETLabel=(UILabel *)[cell.contentView viewWithTag:3];
     
-    // Configure the cell...
+    NSString *eventString=[self.events objectAtIndex:indexPath.row];
+    NSArray *eventData=[eventString componentsSeparatedByString:@";"];
     
+    [nameLabel setText:[eventData objectAtIndex:0]];
+  
+    [STLabel setText:[eventData objectAtIndex:2]];
+    [ETLabel setText:[eventData objectAtIndex:3]];
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -140,15 +211,17 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    NSString *event=[self.events objectAtIndex:path.row];
+    [segue.destinationViewController setValue:event forKey:@"event"];
+    
 }
-*/
+
 
 @end
