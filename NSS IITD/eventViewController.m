@@ -44,7 +44,6 @@
                                 NSURLResponse *response,
                                 NSError *error){
                 NSString *dataString=[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                NSLog(@"%@",dataString);
 
                 NSArray *dataArray=[dataString componentsSeparatedByString:@"break"];
                 [self.events removeAllObjects];
@@ -115,7 +114,6 @@
                                     NSURLResponse *response,
                                     NSError *error){
                     NSString *dataString=[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                    NSLog(@"%@",dataString);
                     NSArray *dataArray=[dataString componentsSeparatedByString:@"break"];
                     [self.events removeAllObjects];
                     

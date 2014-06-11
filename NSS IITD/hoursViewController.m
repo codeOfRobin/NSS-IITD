@@ -28,21 +28,15 @@
     NSString *preURL=@"http://www.nssiitd.in/nsshours/teststudent.php?entry_no=";
     NSString *entryno=[[NSUserDefaults standardUserDefaults] stringForKey:@"entryNo"];
     NSString *URL=[NSString stringWithFormat:@"%@%@",preURL,entryno];
-    NSLog(@"%@",entryno);
     NSURLSession *session = [NSURLSession sharedSession];
     [[session dataTaskWithURL:[NSURL URLWithString:URL]
             completionHandler:^(NSData *data,
                                 NSURLResponse *response,
                                 NSError *error){
                 NSString *dataString=[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                NSLog(@"%@",dataString);
                 self.dataArray=[dataString componentsSeparatedByString:@";"];
                 
-                for (NSString *string in self.dataArray) {
-                    
-                    NSLog(@"%@",string);
-                    
-                }
+               
                 dispatch_async(dispatch_get_main_queue(), ^{
                     UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Hours" message:[self.dataArray objectAtIndex:4] delegate:self cancelButtonTitle:@"okay" otherButtonTitles: nil];
                     [alert show];
