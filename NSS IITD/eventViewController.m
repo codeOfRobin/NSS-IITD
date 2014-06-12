@@ -44,23 +44,32 @@
                                 NSURLResponse *response,
                                 NSError *error){
                 NSString *dataString=[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-
-                NSArray *dataArray=[dataString componentsSeparatedByString:@"break"];
-                [self.events removeAllObjects];
                 
-                for (NSString *string in dataArray)
-                {
-                    [self.events addObject:string];
+                if ([dataString isEqual:@""]) {
+                    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Failure" message:@"There appears to be soemthing wrong with the database" delegate:self cancelButtonTitle:@"okay" otherButtonTitles: nil];
+                    [alert show];
                     
                 }
-                [self.events removeLastObject];
                 
-                
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [self.tableView reloadData];
-                });
+                else
+                {
+                    
+                    NSArray *dataArray=[dataString componentsSeparatedByString:@"break"];
+                    [self.events removeAllObjects];
+                    
+                    for (NSString *string in dataArray)
+                    {
+                        [self.events addObject:string];
+                        
+                    }
+                    [self.events removeLastObject];
+                    
+                    
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self.tableView reloadData];
+                    });
+                }
             }] resume];
-
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -87,20 +96,30 @@
                                     NSError *error){
                     NSString *dataString=[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
                     
-                    NSArray *dataArray=[dataString componentsSeparatedByString:@"break"];
-                    [self.events removeAllObjects];
-
-                    for (NSString *string in dataArray)
-                    {
-                        [self.events addObject:string];
+                    if ([dataString isEqual:@""]) {
+                        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Failure" message:@"There appears to be soemthing wrong with the database" delegate:self cancelButtonTitle:@"okay" otherButtonTitles: nil];
+                        [alert show];
                         
                     }
-                    [self.events removeLastObject];
                     
-                    
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        [self.tableView reloadData];
-                    });
+                    else
+                    {
+                        
+                        NSArray *dataArray=[dataString componentsSeparatedByString:@"break"];
+                        [self.events removeAllObjects];
+
+                        for (NSString *string in dataArray)
+                        {
+                            [self.events addObject:string];
+                            
+                        }
+                        [self.events removeLastObject];
+                        
+                        
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            [self.tableView reloadData];
+                        });
+                    }
                 }] resume];
     }
     
@@ -114,20 +133,29 @@
                                     NSURLResponse *response,
                                     NSError *error){
                     NSString *dataString=[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                    NSArray *dataArray=[dataString componentsSeparatedByString:@"break"];
-                    [self.events removeAllObjects];
-                    
-                    for (NSString *string in dataArray)
-                    {
-                        [self.events addObject:string];
-                        
+                    if ([dataString isEqual:@"Cannot connect to database"]) {
+                        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Failure" message:@"There appears to be soemthing wrong with the database" delegate:self cancelButtonTitle:@"okay" otherButtonTitles: nil];
+                        [alert show];
+
                     }
-                    [self.events removeLastObject];
                     
-                    
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        [self.tableView reloadData];
-                    });
+                    else
+                    {
+                        NSArray *dataArray=[dataString componentsSeparatedByString:@"break"];
+                        [self.events removeAllObjects];
+                        
+                        for (NSString *string in dataArray)
+                        {
+                            [self.events addObject:string];
+                            
+                        }
+                        [self.events removeLastObject];
+                        
+                        
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            [self.tableView reloadData];
+                        });
+                    }
                 }] resume];
     }
     

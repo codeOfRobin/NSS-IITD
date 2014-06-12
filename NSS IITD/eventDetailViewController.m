@@ -70,7 +70,9 @@
     
     //start the connection
     [connection start];
-
+    
+    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"success" message:@"You have beeen registered" delegate:self cancelButtonTitle:@"okay" otherButtonTitles: nil];
+    [alert show];
     
 }
 
