@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A0E903F194C69B90036C992 /* homeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0E903E194C69B90036C992 /* homeViewController.m */; };
+		7A0E9042194C6B480036C992 /* KASlideShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0E9041194C6B480036C992 /* KASlideShow.m */; };
 		7A2D0C7D192D0BF400B2BD14 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2D0C7C192D0BF400B2BD14 /* Foundation.framework */; };
 		7A2D0C7F192D0BF400B2BD14 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2D0C7E192D0BF400B2BD14 /* CoreGraphics.framework */; };
 		7A2D0C81192D0BF400B2BD14 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2D0C80192D0BF400B2BD14 /* UIKit.framework */; };
@@ -41,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A0E903D194C69B90036C992 /* homeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeViewController.h; sourceTree = "<group>"; };
+		7A0E903E194C69B90036C992 /* homeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeViewController.m; sourceTree = "<group>"; };
+		7A0E9040194C6B480036C992 /* KASlideShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KASlideShow.h; sourceTree = "<group>"; };
+		7A0E9041194C6B480036C992 /* KASlideShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KASlideShow.m; sourceTree = "<group>"; };
 		7A2D0C79192D0BF400B2BD14 /* NSS IITD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NSS IITD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A2D0C7C192D0BF400B2BD14 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7A2D0C7E192D0BF400B2BD14 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -133,6 +139,8 @@
 			isa = PBXGroup;
 			children = (
 				7A2D0CB1192D1AF500B2BD14 /* Storyboard.storyboard */,
+				7A0E903D194C69B90036C992 /* homeViewController.h */,
+				7A0E903E194C69B90036C992 /* homeViewController.m */,
 				7A47258E1947B30A004282BC /* eventDetailViewController.h */,
 				7A47258F1947B30A004282BC /* eventDetailViewController.m */,
 				7A47258B19466EC1004282BC /* eventViewController.h */,
@@ -155,6 +163,8 @@
 		7A2D0C85192D0BF400B2BD14 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7A0E9040194C6B480036C992 /* KASlideShow.h */,
+				7A0E9041194C6B480036C992 /* KASlideShow.m */,
 				7A2D0C86192D0BF400B2BD14 /* NSS IITD-Info.plist */,
 				7A2D0C87192D0BF400B2BD14 /* InfoPlist.strings */,
 				7A2D0C8A192D0BF400B2BD14 /* main.m */,
@@ -279,9 +289,11 @@
 			files = (
 				7A2D0CB5192D447100B2BD14 /* hoursViewController.m in Sources */,
 				7AF24247192F9F150043E2C2 /* postDataViewController.m in Sources */,
+				7A0E9042194C6B480036C992 /* KASlideShow.m in Sources */,
 				7A4725901947B30A004282BC /* eventDetailViewController.m in Sources */,
 				7A2D0C8F192D0BF400B2BD14 /* AppDelegate.m in Sources */,
 				7A2D0C92192D0BF400B2BD14 /* NSS_IITD.xcdatamodeld in Sources */,
+				7A0E903F194C69B90036C992 /* homeViewController.m in Sources */,
 				7A47258D19466EC1004282BC /* eventViewController.m in Sources */,
 				7AF2424A192FCB800043E2C2 /* UserDetailsViewController.m in Sources */,
 				7A2D0C8B192D0BF400B2BD14 /* main.m in Sources */,

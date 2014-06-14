@@ -7,7 +7,7 @@
 //
 
 #import "eventDetailViewController.h"
-
+#import "KASlideShow.h"
 @interface eventDetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *startingTime;
 @property (weak, nonatomic) IBOutlet UILabel *endingTime;
