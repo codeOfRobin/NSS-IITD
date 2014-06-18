@@ -7,8 +7,9 @@
 //
 
 #import "homeViewController.h"
-
+#import "KASlideShow.h"
 @interface homeViewController ()
+@property (weak, nonatomic) IBOutlet KASlideShow *slides;
 
 @end
 
@@ -26,6 +27,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.slides addImagesFromResources:@[@"a",@"b",@"c",@"d"]];
+    [self.slides setDelay:1];
+    [self.slides setTransitionType:KASlideShowTransitionSlide];
+    [self.slides setImagesContentMode:UIViewContentModeScaleAspectFit];
+    [self.slides start];
     // Do any additional setup after loading the view.
 }
 

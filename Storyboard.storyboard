@@ -162,7 +162,7 @@
         <scene sceneID="408-yL-trC">
             <objects>
                 <navigationController id="cAQ-pF-fNv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ROu-Wn-Igp"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="events 50x50" id="ROu-Wn-Igp"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yMD-aW-Usi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -175,7 +175,7 @@
             </objects>
             <point key="canvasLocation" x="63" y="118"/>
         </scene>
-        <!--Hours View Controller - Item 1-->
+        <!--Hours View Controller - Hours-->
         <scene sceneID="6yz-w5-3nG">
             <objects>
                 <viewController id="zuX-eM-guN" customClass="hoursViewController" sceneMemberID="viewController">
@@ -205,7 +205,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="jg2-hd-I6s"/>
+                    <tabBarItem key="tabBarItem" title="Hours" image="hours 25x25" id="jg2-hd-I6s"/>
                     <connections>
                         <outlet property="hoursLabel" destination="PPX-IK-aVw" id="0Kw-hl-rfg"/>
                     </connections>
@@ -248,7 +248,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view alpha="0.29999999999999966" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4VZ-87-NHK" customClass="KASlideShow">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4VZ-87-NHK" customClass="KASlideShow">
                                 <rect key="frame" x="20" y="178" width="280" height="213"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.46934876824817517" alpha="1" colorSpace="calibratedWhite"/>
@@ -294,7 +294,10 @@
                             <constraint firstAttribute="bottom" secondItem="GAd-RO-VWw" secondAttribute="bottom" constant="44" id="ylV-2z-fH8"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="r86-7c-uuJ"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home 25x25" id="r86-7c-uuJ"/>
+                    <connections>
+                        <outlet property="slides" destination="4VZ-87-NHK" id="l4L-Uh-Hto"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wVq-8s-TxC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -379,7 +382,7 @@
                             <outletCollection property="gestureRecognizers" destination="pwq-Uy-kwn" appends="YES" id="lzk-mb-iZ7"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Ryt-CC-6QX"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="details 50x50" id="Ryt-CC-6QX"/>
                     <connections>
                         <outlet property="emailIDField" destination="gOO-P4-NnZ" id="cZB-7b-SEM"/>
                         <outlet property="entryNoField" destination="TCz-sS-dzA" id="tnd-C5-LVK"/>
@@ -419,6 +422,10 @@
     </scenes>
     <resources>
         <image name="NSS" width="220" height="191"/>
+        <image name="details 50x50" width="25" height="25"/>
+        <image name="events 50x50" width="50" height="50"/>
+        <image name="home 25x25" width="25" height="25"/>
+        <image name="hours 25x25" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
