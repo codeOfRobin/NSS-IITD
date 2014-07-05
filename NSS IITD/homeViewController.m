@@ -30,7 +30,7 @@
     [self.slides addImagesFromResources:@[@"a",@"b",@"c",@"d"]];
     [self.slides setDelay:1];
     [self.slides setTransitionType:KASlideShowTransitionSlide];
-    [self.slides setImagesContentMode:UIViewContentModeScaleAspectFit];
+    [self.slides setImagesContentMode:UIViewContentModeScaleAspectFill];
     [self.slides start];
     // Do any additional setup after loading the view.
 }

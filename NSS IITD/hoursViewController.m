@@ -29,13 +29,14 @@
     NSString *entryno=[[NSUserDefaults standardUserDefaults] stringForKey:@"entryNo"];
     NSString *URL=[NSString stringWithFormat:@"%@%@",preURL,entryno];
     NSURLSession *session = [NSURLSession sharedSession];
+    
     [[session dataTaskWithURL:[NSURL URLWithString:URL]
             completionHandler:^(NSData *data,
                                 NSURLResponse *response,
                                 NSError *error){
                 NSString *dataString=[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
                 self.dataArray=[dataString componentsSeparatedByString:@";"];
-                
+                NSLog(@"%@",dataString);
                
                 dispatch_async(dispatch_get_main_queue(), ^{
                     UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Hours" message:[self.dataArray objectAtIndex:4] delegate:self cancelButtonTitle:@"okay" otherButtonTitles: nil];
