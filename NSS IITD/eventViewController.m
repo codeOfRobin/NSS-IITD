@@ -30,13 +30,14 @@
     self.events=[[NSMutableArray alloc]init];
     [self.segmentedControl addTarget:self
                          action:@selector(pickOne:)
-               forControlEvents:UIControlEventValueChanged];
+               forControlEvents:UIControlEventAllEvents];
+    [self.segmentedControl setSelectedSegmentIndex:1];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     [self.tableView reloadData];
     
     
-    NSString *URL=@"http://localhost/nss/upcoming_events.php";
+    NSString *URL=@"http://nss.iitd.ac.in/android_1/current_events.php";
     
     NSURLSession *session = [NSURLSession sharedSession];
     [[session dataTaskWithURL:[NSURL URLWithString:URL]
@@ -44,16 +45,14 @@
                                 NSURLResponse *response,
                                 NSError *error){
                 NSString *dataString=[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                
-                if ([dataString isEqual:@""]) {
-                    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Failure" message:@"There appears to be soemthing wrong with the database" delegate:self cancelButtonTitle:@"okay" otherButtonTitles: nil];
+                if ([dataString isEqual:@"Cannot connect to database"]) {
+                    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Failure" message:@"There appears to be soemthing wrong with the database or your internet connection" delegate:self cancelButtonTitle:@"okay" otherButtonTitles: nil];
                     [alert show];
                     
                 }
                 
                 else
                 {
-                    
                     NSArray *dataArray=[dataString componentsSeparatedByString:@"break"];
                     [self.events removeAllObjects];
                     
@@ -70,6 +69,7 @@
                     });
                 }
             }] resume];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -87,7 +87,7 @@
 {
     if(segmentedControl.selectedSegmentIndex==0)
     {
-        NSString *URL=@"http://localhost/nss/upcoming_events.php";
+        NSString *URL=@"http://nss.iitd.ac.in/android_1/upcoming_events.php";
         
         NSURLSession *session = [NSURLSession sharedSession];
         [[session dataTaskWithURL:[NSURL URLWithString:URL]
@@ -97,7 +97,7 @@
                     NSString *dataString=[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
                     
                     if ([dataString isEqual:@""]) {
-                        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Failure" message:@"There appears to be soemthing wrong with the database" delegate:self cancelButtonTitle:@"okay" otherButtonTitles: nil];
+                        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Failure" message:@"There are no upcoming NSS events" delegate:self cancelButtonTitle:@"okay" otherButtonTitles: nil];
                         [alert show];
                         
                     }
@@ -125,7 +125,7 @@
     
     else if (segmentedControl.selectedSegmentIndex==1)
     {
-        NSString *URL=@"http://localhost/nss/current_events.php";
+        NSString *URL=@"http://nss.iitd.ac.in/android_1/current_events.php";
         
         NSURLSession *session = [NSURLSession sharedSession];
         [[session dataTaskWithURL:[NSURL URLWithString:URL]
@@ -134,7 +134,7 @@
                                     NSError *error){
                     NSString *dataString=[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
                     if ([dataString isEqual:@"Cannot connect to database"]) {
-                        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Failure" message:@"There appears to be soemthing wrong with the database" delegate:self cancelButtonTitle:@"okay" otherButtonTitles: nil];
+                        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Failure" message:@"There appears to be soemthing wrong with the database or your internet connection" delegate:self cancelButtonTitle:@"okay" otherButtonTitles: nil];
                         [alert show];
 
                     }

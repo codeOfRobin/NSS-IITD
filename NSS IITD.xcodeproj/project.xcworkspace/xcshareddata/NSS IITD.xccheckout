@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1FDDDD13-5C49-470F-8076-F292CF4CDD1F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>NSS IITD</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>78934CF8-64DE-451F-8A45-1C78A564F80E</key>
+		<string>https://github.com/codeofRobin/NSS-IITD.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>NSS IITD.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>78934CF8-64DE-451F-8A45-1C78A564F80E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/codeofRobin/NSS-IITD.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>78934CF8-64DE-451F-8A45-1C78A564F80E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>78934CF8-64DE-451F-8A45-1C78A564F80E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>NSS-IITD</string>
+		</dict>
+	</array>
+</dict>
+</plist>

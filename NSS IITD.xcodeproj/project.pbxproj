@@ -28,7 +28,9 @@
 		7A2D0CB5192D447100B2BD14 /* hoursViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2D0CB4192D447100B2BD14 /* hoursViewController.m */; };
 		7A47258D19466EC1004282BC /* eventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A47258C19466EC1004282BC /* eventViewController.m */; };
 		7A4725901947B30A004282BC /* eventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A47258F1947B30A004282BC /* eventDetailViewController.m */; };
-		7AF24247192F9F150043E2C2 /* postDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF24246192F9F150043E2C2 /* postDataViewController.m */; };
+		7ADE7F27198D94F800365E50 /* NSS 76x76.png in Resources */ = {isa = PBXBuildFile; fileRef = 7ADE7F24198D94F800365E50 /* NSS 76x76.png */; };
+		7ADE7F28198D94F800365E50 /* NSS 120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 7ADE7F25198D94F800365E50 /* NSS 120x120.png */; };
+		7ADE7F29198D94F800365E50 /* NSS 152x152.png in Resources */ = {isa = PBXBuildFile; fileRef = 7ADE7F26198D94F800365E50 /* NSS 152x152.png */; };
 		7AF2424A192FCB800043E2C2 /* UserDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF24249192FCB800043E2C2 /* UserDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -72,8 +74,9 @@
 		7A47258C19466EC1004282BC /* eventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventViewController.m; sourceTree = "<group>"; };
 		7A47258E1947B30A004282BC /* eventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventDetailViewController.h; sourceTree = "<group>"; };
 		7A47258F1947B30A004282BC /* eventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventDetailViewController.m; sourceTree = "<group>"; };
-		7AF24245192F9F150043E2C2 /* postDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = postDataViewController.h; sourceTree = "<group>"; };
-		7AF24246192F9F150043E2C2 /* postDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = postDataViewController.m; sourceTree = "<group>"; };
+		7ADE7F24198D94F800365E50 /* NSS 76x76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NSS 76x76.png"; sourceTree = "<group>"; };
+		7ADE7F25198D94F800365E50 /* NSS 120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NSS 120x120.png"; sourceTree = "<group>"; };
+		7ADE7F26198D94F800365E50 /* NSS 152x152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NSS 152x152.png"; sourceTree = "<group>"; };
 		7AF24248192FCB800043E2C2 /* UserDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailsViewController.h; sourceTree = "<group>"; };
 		7AF24249192FCB800043E2C2 /* UserDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +110,9 @@
 		7A2D0C70192D0BF400B2BD14 = {
 			isa = PBXGroup;
 			children = (
+				7ADE7F24198D94F800365E50 /* NSS 76x76.png */,
+				7ADE7F25198D94F800365E50 /* NSS 120x120.png */,
+				7ADE7F26198D94F800365E50 /* NSS 152x152.png */,
 				7A2D0C84192D0BF400B2BD14 /* NSS IITD */,
 				7A2D0CA1192D0BF400B2BD14 /* NSS IITDTests */,
 				7A2D0C7B192D0BF400B2BD14 /* Frameworks */,
@@ -147,8 +153,6 @@
 				7A47258C19466EC1004282BC /* eventViewController.m */,
 				7AF24248192FCB800043E2C2 /* UserDetailsViewController.h */,
 				7AF24249192FCB800043E2C2 /* UserDetailsViewController.m */,
-				7AF24245192F9F150043E2C2 /* postDataViewController.h */,
-				7AF24246192F9F150043E2C2 /* postDataViewController.m */,
 				7A2D0CB3192D447100B2BD14 /* hoursViewController.h */,
 				7A2D0CB4192D447100B2BD14 /* hoursViewController.m */,
 				7A2D0C8D192D0BF400B2BD14 /* AppDelegate.h */,
@@ -269,8 +273,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ADE7F28198D94F800365E50 /* NSS 120x120.png in Resources */,
 				7A2D0C89192D0BF400B2BD14 /* InfoPlist.strings in Resources */,
+				7ADE7F29198D94F800365E50 /* NSS 152x152.png in Resources */,
 				7A2D0C94192D0BF400B2BD14 /* Images.xcassets in Resources */,
+				7ADE7F27198D94F800365E50 /* NSS 76x76.png in Resources */,
 				7A2D0CB2192D1AF500B2BD14 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +298,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A2D0CB5192D447100B2BD14 /* hoursViewController.m in Sources */,
-				7AF24247192F9F150043E2C2 /* postDataViewController.m in Sources */,
 				7A0E9042194C6B480036C992 /* KASlideShow.m in Sources */,
 				7A4725901947B30A004282BC /* eventDetailViewController.m in Sources */,
 				7A2D0C8F192D0BF400B2BD14 /* AppDelegate.m in Sources */,
@@ -357,7 +363,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Robin Malhotra (7G2XZXD8B4)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -375,6 +381,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "016912AF-E280-4CED-ABFD-693F05BD1891";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -395,7 +402,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Robin Malhotra (7G2XZXD8B4)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -406,6 +413,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PROVISIONING_PROFILE = "016912AF-E280-4CED-ABFD-693F05BD1891";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -414,14 +422,15 @@
 		7A2D0CAC192D0BF400B2BD14 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Robin Malhotra (7G2XZXD8B4)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSS IITD/NSS IITD-Prefix.pch";
 				INFOPLIST_FILE = "NSS IITD/NSS IITD-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "016912AF-E280-4CED-ABFD-693F05BD1891";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -429,14 +438,15 @@
 		7A2D0CAD192D0BF400B2BD14 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Robin Malhotra (7G2XZXD8B4)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSS IITD/NSS IITD-Prefix.pch";
 				INFOPLIST_FILE = "NSS IITD/NSS IITD-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "016912AF-E280-4CED-ABFD-693F05BD1891";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -481,6 +491,73 @@
 			};
 			name = Release;
 		};
+		7AC16EF5198E692500B9BCA9 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Robin Malhotra (7G2XZXD8B4)";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PROVISIONING_PROFILE = "016912AF-E280-4CED-ABFD-693F05BD1891";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Distribution;
+		};
+		7AC16EF6198E692500B9BCA9 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Robin Malhotra (7G2XZXD8B4)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSS IITD/NSS IITD-Prefix.pch";
+				INFOPLIST_FILE = "NSS IITD/NSS IITD-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "016912AF-E280-4CED-ABFD-693F05BD1891";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Distribution;
+		};
+		7AC16EF7198E692500B9BCA9 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSS IITD.app/NSS IITD";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSS IITD/NSS IITD-Prefix.pch";
+				INFOPLIST_FILE = "NSS IITDTests/NSS IITDTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Distribution;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -489,6 +566,7 @@
 			buildConfigurations = (
 				7A2D0CA9192D0BF400B2BD14 /* Debug */,
 				7A2D0CAA192D0BF400B2BD14 /* Release */,
+				7AC16EF5198E692500B9BCA9 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -498,6 +576,7 @@
 			buildConfigurations = (
 				7A2D0CAC192D0BF400B2BD14 /* Debug */,
 				7A2D0CAD192D0BF400B2BD14 /* Release */,
+				7AC16EF6198E692500B9BCA9 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -507,6 +586,7 @@
 			buildConfigurations = (
 				7A2D0CAF192D0BF400B2BD14 /* Debug */,
 				7A2D0CB0192D0BF400B2BD14 /* Release */,
+				7AC16EF7198E692500B9BCA9 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
