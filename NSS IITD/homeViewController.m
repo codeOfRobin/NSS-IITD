@@ -34,7 +34,25 @@
     [self.slides start];
     // Do any additional setup after loading the view.
 }
-
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"HasLaunchedOnce"])
+    {
+        // app already launched
+    }
+    else
+    {
+        UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"Thank You" message:@"Thank you for downloading our app! For one touch registration, please fill in your details. You can fill them in later as well in the 'User Details' tab in the app later" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles: nil];
+        [alert show];
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"HasLaunchedOnce"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        [self.tabBarController setSelectedIndex:2];
+        // This is the first launch ever
+        
+        
+    }
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
