@@ -32,6 +32,8 @@
 		7ADE7F28198D94F800365E50 /* NSS 120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 7ADE7F25198D94F800365E50 /* NSS 120x120.png */; };
 		7ADE7F29198D94F800365E50 /* NSS 152x152.png in Resources */ = {isa = PBXBuildFile; fileRef = 7ADE7F26198D94F800365E50 /* NSS 152x152.png */; };
 		7AF2424A192FCB800043E2C2 /* UserDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF24249192FCB800043E2C2 /* UserDetailsViewController.m */; };
+		7AFDC7D2199D3FAB00722C70 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFDC7D1199D3FAB00722C70 /* TPKeyboardAvoidingScrollView.m */; };
+		7AFDC7D5199D409B00722C70 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFDC7D4199D409B00722C70 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,10 @@
 		7ADE7F26198D94F800365E50 /* NSS 152x152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NSS 152x152.png"; sourceTree = "<group>"; };
 		7AF24248192FCB800043E2C2 /* UserDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailsViewController.h; sourceTree = "<group>"; };
 		7AF24249192FCB800043E2C2 /* UserDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailsViewController.m; sourceTree = "<group>"; };
+		7AFDC7D0199D3FAB00722C70 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		7AFDC7D1199D3FAB00722C70 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		7AFDC7D3199D409B00722C70 /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		7AFDC7D4199D409B00722C70 /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +150,10 @@
 		7A2D0C84192D0BF400B2BD14 /* NSS IITD */ = {
 			isa = PBXGroup;
 			children = (
+				7AFDC7D3199D409B00722C70 /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				7AFDC7D4199D409B00722C70 /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
+				7AFDC7D0199D3FAB00722C70 /* TPKeyboardAvoidingScrollView.h */,
+				7AFDC7D1199D3FAB00722C70 /* TPKeyboardAvoidingScrollView.m */,
 				7A2D0CB1192D1AF500B2BD14 /* Storyboard.storyboard */,
 				7A0E903D194C69B90036C992 /* homeViewController.h */,
 				7A0E903E194C69B90036C992 /* homeViewController.m */,
@@ -298,9 +308,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A2D0CB5192D447100B2BD14 /* hoursViewController.m in Sources */,
+				7AFDC7D2199D3FAB00722C70 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				7A0E9042194C6B480036C992 /* KASlideShow.m in Sources */,
 				7A4725901947B30A004282BC /* eventDetailViewController.m in Sources */,
 				7A2D0C8F192D0BF400B2BD14 /* AppDelegate.m in Sources */,
+				7AFDC7D5199D409B00722C70 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				7A2D0C92192D0BF400B2BD14 /* NSS_IITD.xcdatamodeld in Sources */,
 				7A0E903F194C69B90036C992 /* homeViewController.m in Sources */,
 				7A47258D19466EC1004282BC /* eventViewController.m in Sources */,

@@ -7,8 +7,10 @@
 //
 
 #import "eventDetailViewController.h"
+#import "TPKeyboardAvoidingScrollView.h"
 #import "KASlideShow.h"
 @interface eventDetailViewController ()
+@property (strong, nonatomic) IBOutlet TPKeyboardAvoidingScrollView *scroller;
 @property (weak, nonatomic) IBOutlet UILabel *startingTime;
 @property (weak, nonatomic) IBOutlet UILabel *endingTime;
 @property (weak, nonatomic) IBOutlet UITextView *description;
@@ -32,7 +34,7 @@
 - (IBAction)register:(id)sender
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
+    self.scroller.contentSize=CGSizeMake(self.scroller.frame.size.width, self.scroller.frame.size.height);
     NSString *name=[defaults objectForKey:@"name"];
     NSString *entryNo=[defaults objectForKey:@"entryNo"];
     NSString *emailID=[defaults objectForKey:@"emailID"];
@@ -79,13 +81,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     NSArray *eventData=[self.event componentsSeparatedByString:@";"];
     [self.navigationItem setTitle:[eventData objectAtIndex:0]];
     [self.description setText:[eventData objectAtIndex:1]];
     [self.startingTime setText:[eventData objectAtIndex:2]];
     [self.endingTime setText:[eventData objectAtIndex:3]];
-    
+    if ([[eventData objectAtIndex:5]isEqualToString:@"entry.0"])
+    {
+        [self.extraNotes setHidden:YES];
+        [[self.view viewWithTag:1] setHidden:YES];
+        [[self.view viewWithTag:2] setHidden:YES];
+    }
     // Do any additional setup after loading the view.
 }
 - (IBAction)tap:(id)sender
