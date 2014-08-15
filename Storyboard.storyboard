@@ -104,11 +104,21 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scrollEnabled="NO" keyboardDismissMode="onDrag" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPY-Bb-666">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPY-Bb-666">
                                         <rect key="frame" x="20" y="63" width="280" height="232"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="280" id="0Va-Qv-O60"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                                         <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                                     </textView>
@@ -145,6 +155,7 @@
                                     <constraint firstAttribute="trailing" secondItem="WPY-Bb-666" secondAttribute="trailing" constant="20" id="7IX-5N-2Ug"/>
                                     <constraint firstItem="IGP-gN-6DR" firstAttribute="top" secondItem="YAu-KR-g4F" secondAttribute="bottom" constant="8" id="8QA-fl-Vjw"/>
                                     <constraint firstItem="YAu-KR-g4F" firstAttribute="top" secondItem="WPY-Bb-666" secondAttribute="bottom" constant="4" id="Tb1-Bw-DI1"/>
+                                    <constraint firstAttribute="width" constant="320" id="UOk-uK-8gl"/>
                                     <constraint firstItem="YAu-KR-g4F" firstAttribute="top" secondItem="WPY-Bb-666" secondAttribute="bottom" constant="4" id="Wc9-W1-O1X"/>
                                     <constraint firstAttribute="bottom" secondItem="0RI-G2-r0u" secondAttribute="bottom" constant="43" id="aV1-eH-QSI"/>
                                     <constraint firstItem="K15-vU-Dcw" firstAttribute="top" secondItem="Zja-a2-Fnv" secondAttribute="bottom" constant="8" id="dvz-9l-xBN"/>

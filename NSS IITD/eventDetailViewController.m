@@ -81,6 +81,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.description sizeToFit];
+    [self.description layoutIfNeeded];
     NSArray *eventData=[self.event componentsSeparatedByString:@";"];
     [self.navigationItem setTitle:[eventData objectAtIndex:0]];
     [self.description setText:[eventData objectAtIndex:1]];
