@@ -28,34 +28,32 @@
     NSString *preURL=@"http://nss.iitd.ac.in/nsshrs/index.php/hours-json?entry=";
     NSString *entryno=[[NSUserDefaults standardUserDefaults] stringForKey:@"entryNo"];
     NSString *URL=[NSString stringWithFormat:@"%@%@",preURL,entryno];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:URL]
-                                                           cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData
-                                                       timeoutInterval:10];
     
-    [request setHTTPMethod: @"GET"];
-    
-    
-    NSOperationQueue *myQueue = [[NSOperationQueue alloc] init];
-    
-    [NSURLConnection sendAsynchronousRequest:request queue:myQueue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-        if (data!=nil)
-        {
-            NSString* newStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-            NSLog(@"%@",newStr);
-            
-            NSDictionary *jsonDict=[NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-            if ([jsonDict isKindOfClass:[NSDictionary class]] )
-            {
-                NSString *hours=[[NSString alloc] init];
-                hours=[NSString stringWithFormat:@"%@",[jsonDict objectForKey:@"hours"]];
-                UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"hours" message:hours delegate:self cancelButtonTitle:@"okay" otherButtonTitles:nil];
-                [alert show];
-            }
-            
-        }
-        
-        
-    }];
+    NSURLSession *session = [NSURLSession sharedSession];
+    [[session dataTaskWithURL:[NSURL URLWithString:URL]
+            completionHandler:^(NSData *data,
+                                NSURLResponse *response,
+                                NSError *error){
+                if (data!=nil)
+                {
+                    NSString* newStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                    NSLog(@"%@",newStr);
+                    
+                    NSDictionary *jsonDict=[NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+                    if ([jsonDict isKindOfClass:[NSDictionary class]] )
+                    {
+                        NSString *hours=[[NSString alloc] init];
+                        hours=[NSString stringWithFormat:@"%@",[jsonDict objectForKey:@"hours"]];
+                        
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"hours" message:hours delegate:self cancelButtonTitle:@"okay" otherButtonTitles:nil];
+                        [alert show];
+                        });
+                    }
+                    
+                }
+            }] resume];
+
 
 }
 
