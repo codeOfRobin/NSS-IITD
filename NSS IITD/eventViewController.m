@@ -87,6 +87,9 @@
 {
     if(segmentedControl.selectedSegmentIndex==0)
     {
+        [self.events removeAllObjects];
+        [self.tableView reloadData];
+
         NSString *URL=@"http://nss.iitd.ac.in/android_1/upcoming_events.php";
         
         NSURLSession *session = [NSURLSession sharedSession];
@@ -125,6 +128,8 @@
     
     else if (segmentedControl.selectedSegmentIndex==1)
     {
+        [self.events removeAllObjects];
+        [self.tableView reloadData];
         NSString *URL=@"http://nss.iitd.ac.in/android_1/current_events.php";
         
         NSURLSession *session = [NSURLSession sharedSession];
@@ -157,6 +162,12 @@
                         });
                     }
                 }] resume];
+    }
+    else
+    {
+        [self.events removeAllObjects];
+        [self.tableView reloadData];
+
     }
     
     
