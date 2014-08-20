@@ -8,12 +8,22 @@
 
 #import "homeViewController.h"
 #import "KASlideShow.h"
+#import <MessageUI/MessageUI.h>
+
 @interface homeViewController ()
+{
+    MFMailComposeViewController *mailComposer;
+    
+}
 @property (weak, nonatomic) IBOutlet KASlideShow *slides;
 
 @end
 
 @implementation homeViewController
+
+
+
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -53,11 +63,49 @@
         
     }
 }
+- (IBAction)gmail:(id)sender
+{
+    mailComposer = [[MFMailComposeViewController alloc]init];
+    mailComposer.mailComposeDelegate = self;
+    [mailComposer setToRecipients:@[@"nssinbox@gmail.com"]];
+     [self presentModalViewController:mailComposer animated:YES];
+
+}
+
+#pragma mark - mail compose delegate
+-(void)mailComposeController:(MFMailComposeViewController *)controller
+         didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error{
+    if (result) {
+        NSLog(@"Result : %d",result);
+    }
+    if (error) {
+        NSLog(@"Error : %@",error);
+    }
+    [self dismissModalViewControllerAnimated:YES];
+    
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)blogger:(id)sender
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://nssiitd.blogspot.com"]];
+}
+
+- (IBAction)facebook:(id)sender
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.facebook.com/NSSIITDelhi"]];
+
+}
+- (IBAction)website:(id)sender
+{
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://nss.iitd.ac.in/"]];
+
+}
+
 
 /*
 #pragma mark - Navigation
